@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professores</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/professors.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div data-include="../components/sidebar.html"></div>
+
+    <main class="main-content">
+      <div data-include="../components/header.html"></div>
+
+      <section class="page-content disciplines-page">
+        <section class="disciplines-list">
+          <div class="discipline-search">
+            <input
+              type="search"
+              placeholder="Buscar por departamento..."
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div class="discipline-tabs">
+            <button class="tab active">Meus professores</button>
+            <button class="tab">Todos os professores</button>
+          </div>
+
+          <div class="discipline-cards">
+            <button class="discipline-card active">
+              <strong>Fulano de Tal Tal Tal</strong>
+              <span>Departamento de biologia</span>
+              <small>email@gmail.com</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>Fulano de Tal Tal Tal</strong>
+              <span>Departamento de biologia</span>
+              <small>email@gmail.com</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>Fulano de Tal Tal Tal</strong>
+              <span>Departamento de biologia</span>
+              <small>email@gmail.com</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>Fulano de Tal Tal Tal</strong>
+              <span>Departamento de biologia</span>
+              <small>email@gmail.com</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="discipline-details">
+          <header class="discipline-heading">
+            <div class="discipline-symbol">[foto]</div>
+            <div>
+              <h2>Fulano de tal</h2>
+              <p>Departamento de Biologia</p>
+            </div>
+          </header>
+
+          <div class="discipline-stats">
+            <div><span>E-mail</span><strong>4</strong></div>
+            <div><span>Contato</span><strong>60h</strong></div>
+            <div><span>Gabinete</span><strong>1</strong></div>
+          </div>
+
+          <section class="detail-box">
+              <h3>Formação</h3>
+              <ul>
+                <li>Pós-doutorado na Alma Mater Studiorum Universita di Bologna, 2012.</li>
+                <li>Doutor em Ciência da Computação, UFMG, 200</li>
+                <li>Doutor em Ciência da Computação, UFMG, 200</li>
+                <li>Doutor em Ciência da Computação, UFMG, 200</li>
+              </ul>
+            </section>
+
+          <section class="detail-box">
+              <h3>Áreas de interesse</h3>
+              <ul>
+                <li>Computação</li>
+                <li>Computação</li>
+                <li>Computação</li>
+                <li>Computação</li>
+              </ul>
+            </section>
+
+            <section class="detail-box">
+              <h3>Disciplinas ministradas</h3>
+              <ul>
+                <li>INF 450</li>
+                <li>INF 330</li>
+              </ul>
+            </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

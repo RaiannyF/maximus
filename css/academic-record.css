@@ -1,0 +1,280 @@
+.academic-history {
+    height: calc(100vh - 4rem);
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.history-summary {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.summary-card {
+    min-width: 0;
+    min-height: 5.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1.5rem 1rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.summary-card > strong {
+    max-width: 9rem;
+    color: #687386;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.summary-value {
+    color: #555;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.progress-circle {
+    width: 4rem;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.7rem solid #cfe0ff;
+    border-top-color: #0645d8;
+    border-right-color: #0645d8;
+    border-radius: 50%;
+    transform: rotate(35deg);
+}
+
+.progress-circle span {
+    color: #444;
+    font-size: 0.8rem;
+    transform: rotate(-35deg);
+}
+
+.history-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.history-legend {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.8rem 1rem 1.5rem;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.history-legend > div {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.legend-color {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.legend-color.completed {
+    background: #5cdd7c;
+}
+
+.legend-color.in-progress {
+    background: #5ba9e4;
+}
+
+.legend-color.pending {
+    background: #e4e6eb;
+}
+
+.period-list {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    overflow-y: auto;
+}
+
+.period-card {
+    flex-shrink: 0;
+    padding: 1.2rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+}
+
+.period-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1rem 0.5rem;
+}
+
+.period-header > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.period-header h2 {
+    color: #444;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.period-header span {
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.period-header > strong {
+    color: #444;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.period-disciplines {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.history-discipline {
+    min-width: 0;
+    min-height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    border: 1px solid #e4e8ee;
+    border-radius: 0.4rem;
+}
+
+.history-discipline.completed {
+    background: #f0fcf8;
+}
+
+.history-discipline.in-progress {
+    background: #f1f8ff;
+}
+
+.history-discipline.pending {
+    background: #f3f3f4;
+}
+
+.history-discipline > strong {
+    color: #173b83;
+    font-size: 1.rem;
+    font-weight: 600;
+}
+
+.history-discipline.completed > strong {
+    color: #00965e;
+}
+
+.history-discipline > span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.history-discipline > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3rem;
+    margin-top: auto;
+}
+
+.history-discipline small {
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1100px) {
+    .academic-history {
+        height: auto;
+        min-height: calc(100vh - 4rem);
+        overflow: visible;
+    }
+
+    .history-summary {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .history-content {
+        overflow: visible;
+    }
+
+    .period-list {
+        overflow: visible;
+    }
+
+    .period-disciplines {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .academic-history {
+        gap: 0.7rem;
+        padding: 0.6rem;
+    }
+
+    .history-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .history-legend {
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .history-content {
+        padding: 0.7rem;
+    }
+
+    .period-card {
+        padding: 0.8rem 0.6rem;
+    }
+
+    .period-header {
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .period-header > div {
+        gap: 0.4rem;
+    }
+
+    .period-disciplines {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerto de matrícula</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/course-registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div data-include="../components/sidebar.html"></div>
+
+    <main class="main-content">
+        <div data-include="../components/header.html"></div>
+
+        <section class="page-content">
+            <section class="schedule-panel">
+                <div class="schedule">
+                    <div class="schedule-header">
+                        <span></span>
+                        <span>SEG</span>
+                        <span>TER</span>
+                        <span>QUA</span>
+                        <span>QUI</span>
+                        <span>SEX</span>
+                    </div>
+
+                    <div class="schedule-body">
+                        <div class="time-column">
+                            <span>08:00</span>
+                            <span>09:00</span>
+                            <span>10:00</span>
+                            <span>11:00</span>
+                            <span>12:00</span>
+                            <span>13:00</span>
+                            <span>14:00</span>
+                            <span>15:00</span>
+                            <span>16:00</span>
+                            <span>17:00</span>
+                            <span>18:00</span>
+                            <span>19:00</span>
+                            <span>20:00</span>
+                            <span>21:00</span>
+                            <span>22:00</span>
+                        </div>
+
+                        <div class="schedule-grid">
+                            <div class="class-card class-monday">
+                                <strong>MAT 140</strong>
+                                <span>Cálculo I</span>
+                                <small>PVB 208</small>
+                            </div>
+                            <div class="class-card class-tuesday">
+                                <strong>MAT 140</strong>
+                                <span>Cálculo I</span>
+                                <small>PVB 208</small>
+                            </div>
+                            <div class="class-card class-thursday-morning">
+                                <strong>MAT 140</strong>
+                                <span>Cálculo I</span>
+                                <small>PVB 208</small>
+                            </div>
+                            <div class="class-card class-thursday">
+                                <strong>MAT 140</strong>
+                                <span>Cálculo I</span>
+                                <small>PVB 208</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="actions-panel">
+                <section class="action-card">
+                    <h2>Adicionar disciplina</h2>
+                    <form>
+                        <label for="codigo-disciplina">Informe o código da disciplina:</label>
+                        <input type="text" id="codigo-disciplina" name="codigo-disciplina">
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-preview">Ver preview</button>
+                            <button type="button" class="btn btn-save">Salvar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="action-card">
+                    <h2>Trocar de turma</h2>
+                    <form>
+                        <label for="disciplina-troca">Escolha a disciplina:</label>
+                        <select id="disciplina-troca" name="disciplina-troca">
+                            <option value=""></option>
+                        </select>
+                        <label for="turma-troca">Escolha a turma que deseja entrar:</label>
+                        <select id="turma-troca" name="turma-troca">
+                            <option value=""></option>
+                        </select>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-preview">Ver preview</button>
+                            <button type="button" class="btn btn-save">Salvar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="action-card">
+                    <h2>Remover disciplina</h2>
+                    <form>
+                        <label for="disciplina-remover">Escolha a disciplina:</label>
+                        <select id="disciplina-remover" name="disciplina-remover">
+                            <option value=""></option>
+                        </select>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-preview">Ver preview</button>
+                            <button type="button" class="btn btn-save">Salvar</button>
+                        </div>
+                    </form>
+                </section>
+            </aside>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

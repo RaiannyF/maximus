@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disciplinas</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/courses.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div data-include="../components/sidebar.html"></div>
+
+    <main class="main-content">
+      <div data-include="../components/header.html"></div>
+
+      <section class="page-content disciplines-page">
+        <section class="disciplines-list">
+          <div class="discipline-search">
+            <input
+              type="search"
+              placeholder="Buscar por código ou nome da disciplina..."
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div class="discipline-tabs">
+            <button class="tab active">Minhas disciplinas</button>
+            <button class="tab">Todas as disciplinas</button>
+          </div>
+
+          <div class="discipline-cards">
+            <button class="discipline-card active">
+              <strong>INF 100 - Introdução à computação</strong>
+              <span>Prof. Fulano de tal</span>
+              <small>4 créditos - 60h</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>INF 100 - Introdução à computação</strong>
+              <span>Prof. Fulano de tal</span>
+              <small>4 créditos - 60h</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>INF 100 - Introdução à computação</strong>
+              <span>Prof. Fulano de tal</span>
+              <small>4 créditos - 60h</small>
+            </button>
+
+            <button class="discipline-card">
+              <strong>INF 100 - Introdução à computação</strong>
+              <span>Prof. Fulano de tal</span>
+              <small>4 créditos - 60h</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="discipline-details">
+          <header class="discipline-heading">
+            <div class="discipline-symbol">BAN</div>
+            <div>
+              <h2>BAN 200 - Zoologia dos Invertebrados I</h2>
+              <p>Departamento de Biologia</p>
+            </div>
+          </header>
+
+          <div class="discipline-stats">
+            <div><span>Créditos</span><strong>4</strong></div>
+            <div><span>Carga horária</span><strong>60h</strong></div>
+            <div><span>Semestre</span><strong>1</strong></div>
+          </div>
+
+          <section class="detail-box syllabus">
+            <h3>Ementa</h3>
+            <p>
+              This is a long established fact that a reader will be distracted
+              by the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English.
+            </p>
+          </section>
+
+          <div class="requirements">
+            <section class="detail-box">
+              <h3>Pré-requisitos</h3>
+              <ul>
+                <li>INF 450</li>
+                <li>INF 330</li>
+              </ul>
+            </section>
+
+            <section class="detail-box">
+              <h3>Disciplinas dependentes</h3>
+              <ul>
+                <li>INF 750</li>
+                <li>INF 930</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="classes-table-wrapper">
+            <table class="classes-table">
+              <thead>
+                <tr>
+                  <th>Turma</th>
+                  <th>Professor</th>
+                  <th>Horário</th>
+                  <th>Vagas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Fulano de tal</td>
+                  <td>Seg 08h–10h<br />Qua 10h–12h</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>Fulano de tal</td>
+                  <td>Seg 08h–10h<br />Qua 10h–12h</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

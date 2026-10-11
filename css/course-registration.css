@@ -1,0 +1,306 @@
+.page-content {
+    min-height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(13rem, 21vw, 23rem);
+    align-items: stretch;
+    gap: 0.8rem;
+    padding: 1rem;
+}
+
+.schedule-panel {
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    padding: 1.5rem 1rem 1rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+}
+
+.schedule {
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-header {
+    min-height: 2.2rem;
+    display: grid;
+    grid-template-columns: 3.5rem repeat(5, minmax(0, 1fr));
+    align-items: start;
+    color: var(--muted);
+    font-size: 15px;
+    text-align: center;
+}
+
+.schedule-body {
+    flex: 1;
+    min-height: 32rem;
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+}
+
+.time-column {
+    display: grid;
+    grid-template-rows: repeat(15, minmax(0, 1fr));
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.time-column span {
+    position: relative;
+    top: -0.35rem;
+}
+
+.schedule-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(15, minmax(0, 1fr));
+    background-image:
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 20% 100%, 100% calc(100% / 15);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.class-card {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin: 0.1rem 0.15rem;
+    padding: 0.45rem 0.4rem;
+    overflow: hidden;
+    border-left: 0.2rem solid var(--primary);
+    border-radius: 0.35rem;
+    background: #edf2ff;
+    font-size: 0.8rem;
+}
+
+.class-card strong {
+    color: #174ec5;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.class-card span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.class-card small {
+    color: var(--muted);
+    font-size: 20px;
+}
+
+.class-monday {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+}
+
+.class-tuesday {
+    grid-column: 2;
+    grid-row: 7 / span 2;
+    background: #f1ecf9;
+    border-color: #8662bd;
+}
+
+.class-thursday-morning {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    background: #f1ecf9;
+    border-color: #8662bd;
+}
+
+.class-thursday {
+    grid-column: 4;
+    grid-row: 3 / span 2;
+}
+
+.actions-panel {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding-top: 0.4rem;
+}
+
+.action-card {
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+}
+
+.action-card h2 {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.action-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-card label {
+    margin-bottom: 0.5rem;
+    color: #596477;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.action-card input,
+.action-card select {
+    width: 100%;
+    min-width: 0;
+    min-height: 2.7rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.7rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.action-card input:focus,
+.action-card select:focus {
+    border-color: var(--primary);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.btn {
+    min-width: 0;
+    flex: 1;
+    min-height: 2.3rem;
+    padding: 0.45rem 0.6rem;
+    border: none;
+    border-radius: 0.45rem;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-preview {
+    background: var(--preview);
+}
+
+.btn-save {
+    background: var(--success);
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+@media (max-width: 1100px) {
+    .page-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .schedule-panel {
+        width: 100%;
+        min-height: 70vh;
+    }
+
+    .schedule-body {
+        min-height: 35rem;
+    }
+
+    .actions-panel {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .action-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-content {
+        gap: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .schedule-panel {
+        min-height: 65vh;
+        padding: 1rem 0.4rem;
+    }
+
+    .schedule-header {
+        grid-template-columns: 2.5rem repeat(5, minmax(0, 1fr));
+        font-size: 0.7rem;
+    }
+
+    .schedule-body {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        min-height: 32rem;
+    }
+
+    .time-column {
+        font-size: 0.7rem;
+    }
+
+    .class-card {
+        gap: 0.2rem;
+        padding: 0.25rem;
+    }
+
+    .class-card strong {
+        font-size: 0.65rem;
+    }
+
+    .class-card span {
+        font-size: 0.7rem;
+        overflow-wrap: anywhere;
+    }
+
+    .class-card small {
+        font-size: 0.6rem;
+    }
+
+    .actions-panel {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .action-card {
+        padding: 1rem;
+    }
+
+    .action-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .action-card label {
+        font-size: 0.9rem;
+    }
+
+    .form-buttons {
+        justify-content: flex-start;
+    }
+
+    .btn {
+        flex: 0 1 auto;
+        min-width: 7rem;
+    }
+}
