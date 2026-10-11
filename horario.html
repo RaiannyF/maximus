@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário de Aulas - MAXIMUS</title>
+    <!-- Repare que removemos o script do Tailwind -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="horario">
+
+    <div data-include="components/sidebar.html"></div>
+
+    <main class="main-content">
+        <div data-include="components/header.html"></div>
+
+        <div class="page-container">
+            <!-- Tabela de Horário -->
+            <div class="card schedule-wrapper" style="padding: 1.5rem;">
+                <div class="schedule-grid-header">
+                    <div></div>
+                    <div>Seg</div>
+                    <div>Ter</div>
+                    <div>Qua</div>
+                    <div>Qui</div>
+                    <div>Sex</div>
+                </div>
+
+                <div class="schedule-grid-body no-scrollbar">
+                    <div class="time-col">
+                        <div class="grid-cell">08:00</div>
+                        <div class="grid-cell">10:00</div>
+                        <div class="grid-cell">12:00</div>
+                        <div class="grid-cell">14:00</div>
+                        <div class="grid-cell">16:00</div>
+                    </div>
+
+                    <div class="day-col"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>
+                    <div class="day-col"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>
+                    <div class="day-col"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>
+                    <div class="day-col"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>
+                    <div class="day-col"><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div></div>
+
+                    <!-- Aulas -->
+                    <div class="class-block" style="left: 16.66%; top: 60px;">
+                        <div class="class-block-inner class-blue">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #1d4ed8;">MAT 140</span>
+                            <span style="font-size: 0.875rem; font-weight: 600;">Cálculo I</span>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary);">PVB 208</span>
+                        </div>
+                    </div>
+                    
+                    <div class="class-block" style="left: 33.33%; top: 180px;">
+                        <div class="class-block-inner class-purple">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #7e22ce;">MAT 140</span>
+                            <span style="font-size: 0.875rem; font-weight: 600;">Cálculo I</span>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary);">PVB 208</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumo -->
+            <div class="card" style="width: 320px;">
+                <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Disciplinas</h3>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <p style="font-size: 0.75rem; font-weight: 700; color: var(--brand-blue); margin-bottom: 0.25rem;">MAT 140</p>
+                        <p style="font-size: 0.875rem; font-weight: 600;">Data Structures</p>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Fulano de tal</p>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.75rem; font-weight: 700; color: var(--brand-blue); margin-bottom: 0.25rem;">MAT 140</p>
+                        <p style="font-size: 0.875rem; font-weight: 600;">Linear Algebra</p>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Dr. Marcus Reed • Newton 108</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

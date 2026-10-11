@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciplinas - MAXIMUS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="disciplinas">
+
+    <div data-include="components/sidebar.html"></div>
+
+    <main class="main-content">
+        <div data-include="components/header.html"></div>
+
+        <div class="page-container" style="height: calc(100vh - var(--header-height));">
+            
+            <div class="card disciplines-sidebar">
+                <div class="disciplines-header">
+                    <input type="text" class="search-input" placeholder="Buscar por código ou nome da disciplina...">
+                    <div class="tabs">
+                        <button class="tab active">Minhas disciplinas</button>
+                        <button class="tab">Todas as disciplinas</button>
+                    </div>
+                </div>
+
+                <div class="disciplines-list no-scrollbar">
+                    <div class="discipline-item active">
+                        <h4 style="font-size: 0.875rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 0.5rem;">INF 100 - Introdução a computação</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Prof. Fulano de tal</p>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary);">4 créditos - 60h</p>
+                    </div>
+                    <div class="discipline-item">
+                        <h4 style="font-size: 0.875rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 0.5rem;">INF 100 - Introdução a computação</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Prof. Fulano de tal</p>
+                        <p style="font-size: 0.75rem; color: var(--text-secondary);">4 créditos - 60h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card discipline-details">
+                <p>Nenhuma disciplina selecionada.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
