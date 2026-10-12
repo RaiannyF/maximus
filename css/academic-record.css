@@ -49,17 +49,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.7rem solid #cfe0ff;
-    border-top-color: #0645d8;
-    border-right-color: #0645d8;
     border-radius: 50%;
-    transform: rotate(35deg);
+    background:
+        radial-gradient(closest-side, var(--white) 72%, transparent 73%),
+        conic-gradient(#0645d8 var(--progress, 0%), #cfe0ff 0);
 }
 
 .progress-circle span {
     color: #444;
     font-size: 0.8rem;
-    transform: rotate(-35deg);
 }
 
 .history-content {
@@ -188,7 +186,7 @@
 
 .history-discipline > strong {
     color: #173b83;
-    font-size: 1.rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
